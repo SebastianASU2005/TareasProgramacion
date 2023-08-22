@@ -67,16 +67,16 @@ elif (diaS == 'jueves'):
     print('dia de practica hablada no se dicta ningun examen')
     asistencia=float(input("Ingrese el porcentaje de asistencia de la clase"))
     if (asistencia)>=50:
-        print("Asistio mas del 50% de la clase")
+        print("Asistio mas del 50% de la clase ")
     else:
         print("No asistio el 50% de la clase ")
 elif (diaS == 'viernes'):
-    print('Dia de ingles extranjero no se dictan examenes')
+    print('Dia de ingles viajero no se dictan examenes')
     if ((int(dd)==1 and int(mm)==1) or (int(dd)==1 and int(mm)==7)):
         print("Comienzo del nuevo ciclo")
         cantAlumnos=int(input("Ingresar la cantiadad de alumnos en el nuevo ciclo"))
         precio=int(input("Ingrese el precio por persona "))
-        print(f"El precio total del nuevo ciclo es: {precio*cantAlumnos}")
+        print(f"El precio total del nuevo ciclo es: ${precio*cantAlumnos}")
     else:
         print("Tenga un buen dia")
         print(dd,mm)
