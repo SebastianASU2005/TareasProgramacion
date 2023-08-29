@@ -1,214 +1,225 @@
-# 1-	Crear un programa que reciba el número de años que tiene nuestra computadora y muestre en la consola que el computador es nuevo si es menor o igual a 2 años y que el computador es viejo si es mayor a 2 años.
-anios = int(input('ingrese cantidad de años de su pc: '))
-if (anios <= 2):
-    print('su pc es menor o igual a 2 años')
-elif (anios > 2):
-    print('su pc es mayor a 2 años')
-# 2-	Hacer que el programa anterior muestre un mensaje de error si el usuario digita un número negativo.
-elif (anios < 0):
-    print('no puede ingresar numeros negativos')
-
-# 3-	Solicitar al usuario que ingrese los nombres de dos personas, los cuales se almacenarán en dos variables. A continuación. Imprimir ‘coincidencia’ si ambos nombres comienzan con la misma letra. Si no es así, imprimir ‘no hay coincidencia’.
-nombre1 = input('ingrese nombre1: ')
-nombre2 = input('ingrese nombre2: ')
-if (nombre1[0] == nombre2[0]):
-    print('coincidencia')
+# 1
+anos = int(input("Ingrese la cantidad de años que tiene el computador"))
+if (anos <= 2):
+    print("El ordenador es nuevo")
 else:
-    print('no oincidencia')
+    print("El ordenadoor es viejo")
 
-# 4-	Crear un programa que permita al usuario elegir un candidato por el cual votar. Las posibilidades son: candidato A por el partido rojo, candidato B por el partido verdad, candidato C por el partido azul.
-# Según el candidato elegido (A, B o C) se debe imprimir el mensaje: ‘Usted ha votado por el partido [color del candidato elegido].
-# Si el usuario ingresa una opción que no corresponde a ninguno de los candidatos disponibles, indicar ‘Opción errónea.’
-elegido = input('ingrese candidato a cual votar, A.B.C').lower
-if (elegido == 'a'):
-    print('eligio al partido rojo')
-elif (elegido == 'b'):
-    print('eligio al partido verde')
-elif (elegido == 'c'):
-    print('eligio al partido azul')
+# 2
+anos = int(input("Ingrese la cantidad de años que tiene el computador"))
+if (anos < 0):
+    print("ERROR")
+elif (anos <= 2):
+    print("El ordenador es nuevo")
 else:
-    print('partido inexistente')
+    print("El ordenadoor es viejo")
 
-# 5-	Escribir un programa que solicite al usuario una letra, si es una vocal, mostrar el mensaje ‘Es vocal’.
-# Se debe validar que el usuario ingrese sólo un carácter. Si ingresa un string de más de un carácter, informarle que no se puede procesar el dato.
-vocal = input('ingrese letra: ')
-if (vocal == 'a' or vocal == 'e' or vocal == 'i' or vocal == 'u'):
-    print('es vocal')
-elif (len(vocal) > 1):
-    print('no se puede ingresar mas de un caracter')
+# 3
+nombre1 = input("Ingrese el primer nombre")
+nombre2 = input("Ingrese el segundo nombre")
+if (nombre1[0:1] == nombre2[0:1]):
+    print("Hay coincidencia")
 else:
-    print('no es vocal')
+    print("No hay coincidencia")
 
-# 6-	Hacer un programa que permita saber si un año es bisiesto. Para que un año sea bisiesto debe ser divisible por 4 y no debe ser divisible por 100, excepto que también sea divisible por 400.
-anio = int(input('ingrese año: '))
-if (anio % 4 == 0 and anio % 100 != 0) or anio % 400 == 0:
-    print('es bisiesto')
+# 4
+voto = input(
+    "Ingrese al partido que desea votar:A(partido rojo),B(partido verdad),C(partido azul)").lower()
+if (voto == "a"):
+    print(f"Usted a votado por el partido rojo")
+elif (voto == "b"):
+    print("Usted a votado por el partido verdad")
+elif (voto == "c"):
+    print("Usted a votado por el partido azul")
 else:
-    print('no es bisiesto')
+    print("Opción errónea")
 
-# 7-	Escribí un programa para solicitar al usuario tres números y mostrar en pantalla al menor de los tres.
-num1 = int(input('ingrese num1'))
-num2 = int(input('ingrese num2'))
-num3 = int(input('ingrese num3'))
-if (num1 < num2 and num1 < num3):
-    print(f'el numero mas chico es {num1}')
-elif (num2 < num1 and num2 < num3):
-    print(f'el numero mas chico es {num2}')
+# 5
+vocal = input("Ingrese una vocal").lower()
+if (len(vocal) > 1):
+    print("No se puede procesar el dato")
+elif (vocal == "a"):
+    print("Es vocal")
+elif (vocal == "e"):
+    print("Es vocal")
+elif (vocal == "i"):
+    print("Es vocal")
+elif (vocal == "o"):
+    print("Es vocal")
+elif (vocal == "u"):
+    print("Es vocal")
 else:
-    print(f'el numero mas chico es {num3}')
+    print("No es vocal")
 
-# 8-	Escribí un programa que solicite ingresar un nombre de usuario y una contraseña. Si el nombre es “Gwenevere” y la contraseña es “excalibur”, mostrar en pantalla “Usuario y contraseña correctos. Puede ingresar a Camelot”. Si el nombre o la contraseña no coinciden, mostrar “Acceso denegado”.
-user = 'Paulo'
-password = 'Godoycruz'
-usuario = input('ingrese usuario: ')
-contrasenia = input('ingrese contraseña')
-if (usuario == user and contrasenia == password):
-    print('acceso habilitado')
+# 6
+ano = int(input("Ingrese el año que desee"))
+if (ano % 400 == 0):
+    print("El año ingresado es bisiesto")
+elif (ano % 100 == 0):
+    print("El año ingresado no es bisiesto")
+elif (ano % 4 == 0):
+    print("El año ingresado es bisiesto")
 else:
-    print('acceso denegado')
+    print("El año ingresado no es bisiesto")
 
-# 9-	Los alumnos de un curso se han dividido en dos grupos A y B de acuerdo al sexo y el nombre. El grupo A está formado por las mujeres con un nombre anterior a la M y los hombres con un nombre posterior a la N y el grupo B por el resto. Escribir un programa que pregunte al usuario su nombre y sexo, y muestre por pantalla el grupo que le corresponde.
-nombre = input('ingrese su nombre: ')
-sexo = input('ingrese sexo H,M: ')
-if (sexo == 'M' and nombre[0] < 'M') or (sexo == 'H' and nombre[0] > 'N'):
-    print('corresponde al grupo A')
+# 7
+menor1 = int(input("Ingrese el primer numero"))
+menor2 = int(input("Ingrese el segundo numero"))
+menor3 = int(input("Ingrese el tercer numero"))
+if (menor1 < menor2 and menor1 < menor3):
+    print(f"El número menor es {menor1}")
+elif (menor2 < menor1 and menor2 < menor3):
+    print(f"EL número menos es {menor2}")
 else:
-    print('corresponde al grupo b')
+    print(f"El número menor es {menor3}")
 
-# 10-Escribir un programa para una empresa que tiene salas de juegos para todas las edades y quiere calcular de forma automática el precio que debe cobrar a sus clientes por entrar. El programa debe preguntar al usuario la edad del cliente y mostrar el precio de la entrada. Si el cliente es menor de 4 años puede entrar gratis, si tiene entre 4 y 18 años debe pagar $500 y si es mayor de 18 años, $1000.
-
-edad = int(input('ingrese edad: '))
-if edad < 4:
-    print('entra gratis')
-elif edad >= 4 and edad <= 18:
-    print('debe pagar $500')
+# 8
+user = "Gwenevere"
+password = "excalibur"
+userIngre = str(input("Ingrese un usuario"))
+passIngre = str(input("Ingrese la contraseña"))
+if (userIngre == user and passIngre == password):
+    print("Usuario y contraseña correctos.Puede ingresar camelot")
 else:
-    print('debe pagar $1000')
+    print("accseso denegado")
 
-# 11-	La pizzería Bella Napoli ofrece pizzas vegetarianas y no vegetarianas a sus clientes. Los ingredientes para cada tipo de pizza aparecen a continuación.
-# •	Ingredientes vegetarianos: Pimiento y tofu.
-# •	Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
-# Escribir un programa que pregunte al usuario si quiere una pizza vegetariana o no, y en función de su respuesta le muestre un menú con los ingredientes disponibles para que elija. Solo se puede elegir un ingrediente además de la mozzarella y el tomate que están en todas la pizzas. Al final se debe mostrar por pantalla si la pizza elegida es vegetariana o no y todos los ingredientes que lleva.
-
-tipopizza = input('desea una pizza vegetariana o no?')
-if tipopizza == 'si':
-    print('INGREDIENTES:PIMIENTO,TOFU ')
-    ing = input('ingrese el ingrediente que desea: ')
-    print(f'usted eligio una pizza vegana con {ing}')
+# 9
+nombre = str(input("Ingrese su nombre"))
+sexo = str(input("Ingrese el sexo"))
+if (nombre.title()[0] > "N" and sexo.lower() == "hombre"):
+    print("Pertenece al grupo A")
+elif (nombre.title()[0] < "M" and sexo.lower() == "mujer"):
+    print("Pertenece al grupo A")
 else:
-    print('INGREDIENTES:PEPERONI,JAMON,SALOMON ')
-    ing = input('ingrese el ingrediente que desea: ')
-    print(f'usted eligio una pizza no vegetariana con {ing}')
+    print("Pertenece al grupo B")
 
-# 12-Escriba un programa que pida el año actual y un año cualquiera y que escriba cuántos años han pasado desde ese año o cuántos años faltan para llegar a ese año.
-anioActual = int(input('igrese año actual: '))
-anioCualquiera = int(input('ingrese año cualquiera'))
-resto = abs(anioActual-anioCualquiera)
-print(f'han pasado o falta para llegar: {resto} años')
-
-# 13-Escriba un programa que pida dos números enteros y que escriba si el mayor es múltiplo del menor. Haciendo que el programa avise cuando se escriben valores negativos o nulos.
-
-num1 = int(input('ingrese num1: '))
-num2 = int(input('ingrese num2: '))
-
-if num1 < 0 and num2 < 0:
-    print('los numeros son negativos')
+#10
+edad=int(input("Ingrese la edad"))
+if(edad<4):
+    print("la entrada es gratis")
+elif(edad>=4 and edad<=18):
+    print("La entrada cuesta $500")
 else:
-    if num1 > num2:
-        if (num1 % num2) == 0:
-            print(f'el numero {num1} es multiplo de {num2}')
-        else:
-            print(f'el numero {num1} no es multiplo de {num2}')
+    print("La entrada cuesta $1000") 
+
+#11
+print("Escriba si o no")
+eleccion=str(input("Desea una pizza vegetariana o no?"))
+if(eleccion.lower()=="si"):
+    print("Elija un ingrediente")
+    ingrediente=str(input("Pimiento/Tofu"))
+    if(ingrediente.lower()=="pimiento" or ingrediente.lower()=="tofu"):
+        print(f"Pizza vegetariana. Ingredientes:Mozzarella,tomate,{ingrediente}")
     else:
-        if (num2 % num1) == 0:
-            print(f'el numero {num2} es multiplo de {num1}')
+        print("Ingrediente erroneo,Pizza vegetariana. Ingredientes:Mozzarella,tomate ")
+elif(eleccion.lower()=="no"):
+    print("Elija un ingrediente")
+    ingrediente=str(input("Peperoni/Jamon/Salmon"))
+    if(ingrediente.lower()=="peperoni" or ingrediente.lower()=="jamon" or ingrediente.lower()=="salmon"):
+        print(f"Pizza no vegetariana. Ingredientes:Mozzarella,tomate,{ingrediente}")
+    else:
+        print("Ingrediente erroneo, Pizza no vegetariana. Ingredientes:Mozzarella,tomate")
+else:
+    print("Eleccion errone")
+
+#12
+anoActual=int(input("Ingrese el año actual"))
+anoCualquiera=int(input("Ingrese cualquier año"))
+if(anoActual>anoCualquiera):
+    print(f"Han pasado {abs(anoActual-anoCualquiera)}")
+elif(anoActual<anoCualquiera):
+    print(f"Faltan {abs(anoActual-anoCualquiera)} años")
+else:
+    print("Estamos en ese año")
+
+#13
+num1=int(input("Ingrese un numero"))
+num2=int(input("Ingrese otro numero"))
+if(num1<=0 or num2<=0):
+    print("Valores negativos o nulo")
+else:
+    if(num1>num2):
+        if(num1%num2==0):
+            print("El numero mayor es multiplo del menor")
         else:
-            print(f'el numero {num2} no es multiplo de {num1}')
+            print("El nuemero mayor no es multiplo del menor")
+    else:
+        if(num2%num1==0):
+            print("El mayor es multiplo del menor")
+        else:
+            print("El mayor no es multiplo del menor")
 
-# 14-Escriba un programa que pida los coeficientes de una ecuación de primer grado (a x + b = 0) y escriba la solución.
-# Se recuerda que una ecuación de primer grado puede no tener solución, tener una solución única, #o que todos los números sean solución. Se recuerda que la fórmula de las soluciones es
-# x = -b / a
+#14
+a=float(input("Ingrese el valor de A"))
+b=float(input("Ingrese el valor de B"))
+x=-b/a
+print(f"El valor de x en la ecuación {a}x + {b} = 0 es de {x}")
 
-b = int(input('ingrese valor de b: '))
-a = int(input('ingrese valor de a: '))
-print(f'{a}x + {b} = 0 ')
-x = -b/a
-print(f'el valor de x es: {x}')
-
-# 15-	Escriba un programa que pregunte primero si se quiere calcular el área de un triángulo o la de un círculo. Si se contesta que se quiere calcular el área de un triángulo (escribiendo T o t), el programa tiene que pedir entonces la base y la altura y escribir el área. Si se contesta que se quiere calcular el área de un círculo (escribiendo C o c), el programa tiene que pedir entonces el radio y escribir el área.
-
-op = input('que desea calcular? triangulo(t) o circulo(c): ')
-if op == 't':
-    base = float(input('ingrese base'))
-    altura = float(input('ingrese altura'))
-    area = 1/2 * base * altura
-    print(f'el area del triangulo es: {area}')
-
-
-# 16-	Haz una calculadora básica pida al usuario dos valores, a y b.
-# Según la opción que desean, realizar la operación:
-# •	Si operación es 1 entonces debemos ver el resultado de a + b
-# •	Si operación es 2 entonces debemos ver el resultado de a * b
-# Si operación es 3 entonces debemos ver el resultado de a - b
-# •	Si operación es 4 entonces debemos ver el resultado de a / b
-
-valor1 = int(input('ingrese valor 1: '))
-valor2 = int(input('ingrese valor 2: '))
-op = input('que operacion desea realizar: 1(suma),2(mul),3(resta),4(div): ')
-if op == '1':
-    print(f'el resultado es: {valor1 + valor2}')
-elif op == '2':
-    print(f'el resultado es: {valor1 * valor2}')
-elif op == '3':
-    print(f'el resultado es: {valor1 - valor2}')
-elif op == '4':
-    print(f'el resultado es: {valor1 / valor2}')
+#15
+forma=str(input("Ingrese T o t si desea calcular el área de un triángulo ó ingrese C o c si desea calcular el área de un círculo")).lower()
+if (forma=="t"):
+    base=float(input("Ingrese la base del triángulo"))
+    altura=float(input("Ingrese la altura del triángulo"))
+    area=(base*altura)/2
+    print(f"El área del triágulo es {area}")
+elif(forma=="c"):
+    radio=float(input("Ingrese el radio del círculo"))
+    area1=3.14*(radio**2)
+    print(f"El área del círculo es {area1}")
 else:
-    print('opcion incorrecta')
+    print("dato incorrecto")
 
-# 17-	Requerir al usuario que ingrese un día de la semana e imprimir un mensaje si es lunes, otro mensaje diferente si es viernes, otro mensaje diferente si es sábado o domingo. Si el día ingresado no es ninguno de esos, imprimir otro mensaje.17-	Requerir al usuario que ingrese un día de la semana e imprimir un mensaje si es lunes, otro mensaje diferente si es viernes, otro mensaje diferente si es sábado o domingo. Si el día ingresado no es ninguno de esos, imprimir otro mensaje.
-dia = input('ingrese dia de la semana: ')
-if dia == 'lunes':
-    print('es lunes')
-elif dia == 'viernes':
-    print('es viernes')
-elif dia == 'sabado' or dia == 'domingo':
-    print('es finde')
+#16
+a=float(input("Ingrese el valor de A"))
+b=float(input("Ingrese el valor de B"))
+decision=input("Ingrese la operación que desea realizar: 1_Suma 2_Multiplicación 3_Resta 4_Divison")
+if(decision==1):
+    print(f"La suma de los valores {a} y {b} es {a+b}")
+elif(decision==2):
+        print(f"La multiplicacion de los valores {a} y {b} es {a*b}")
+elif(decision==3):
+        print(f"La resta de los valores {a} y {b} es {a-b}")
+elif(decision==4):
+        print(f"La división de los valores {a} y {b} es {a/b}")
 else:
-    print('no es ni lunes,viernes,sabado o domingo')
+    print("El dato que ingreso no corresponde a niguna operación matemática")
 
-# 18-Preguntar al usuario el total de horas trabajadas en el mes y el salario por hora.
-# La jornada de trabajo mínima es de 48 horas. Calcular, dadas las horas trabajadas, si trabajó horas extras y mostrar esta cantidad.
-# Mostrar su salario total, tomando en cuenta que las horas extras serán pagadas un 10% más que las horas laborales comunes.
-
-horast = int(input('ingrese cant de horas trabajadas: '))
-salph = float(input('ingrese salario por hora: '))
-if horast > 0 and horast <= 48:
-    salTotal = horast*salph
-    print(f'usted tiene que cobrar ${salTotal}')
-elif horast > 0 and horast > 48:
-    dif = horast-48
-    pagohex = (dif*salph)+(dif*salph)*0.10
-    salTotal = (horast*salph)+pagohex
-    print(f'usted tiene que cobrar ${salTotal}')
-
-# 19-Determinar cuánto se debe pagar por una cantidad de lápices considerando que si son 1000 o más, existe un descuento de 7% y teniendo en cuenta que el costo por lápiz es de $60; de lo contrario no hay descuento.
-cant = int(input('ingrese cant de lapiz'))
-if cant < 1000:
-    total = cant*60
-    print(f'tenes que pagar ${total} no hay descuento')
-elif cant >= 1000:
-    descuento = (cant*60) * 0.07
-    print(descuento)
-    total = (cant*60)-descuento
-    print(f'tenes que pagar ${total} si hay descuento')
-# 20-Determinar si un alumno aprueba o reprueba un curso, sabiendo que aprobara si su promedio de cuatro (4) notas, es mayor o igual a 6; caso contrario saldrá desaprobado.
-nota1 = float(input('ingrese nota1:'))
-nota2 = float(input('ingrese nota2: '))
-nota3 = float(input('ingrese nota3: '))
-nota4 = float(input('ingrese nota4: '))
-prom = (nota1+nota2+nota3+nota4)/4
-if prom < 60:
-    print('desaprobado')
+#17
+dia=str(input("Ingrese el día de la semana que desee")).lower()
+if(dia=="lunes"):
+    print("LUNES es solo una palabra,tú decides el significado")
+elif(dia=="viernes"):
+    print("Hoy es vierne y tu cuerpo lo sabe")
+elif(dia=="sabado" or dia=="domingo" or dia=="sábado"):
+    print("El fin de semana es para salir no para quedarse en casa")
 else:
-    print('aprobado')
+    print("El tiempo que se disfruta es el verdadero tiempo vivido")
+
+#18
+horas=int(input("Ingrese la cantidad de horas que trabajo en el mes"))
+paga=int(input("Ingrese el salario que recibe por hora trabajada"))
+if(horas>48):
+    extra=(horas-48)*(paga*1.1)
+    salario=extra+(48*paga)
+    print(f"El salario total a recibir es de ${salario}")
+else:
+    print(f"El salario total a recibir es de ${horas*paga}")
+
+#19
+cantidad=int(input("Ingrese la cantidad de lápices que desea comprar"))
+if(cantidad>=1000):
+    descuento=(cantidad*60)*0.07
+    print(f"El total a pagar por la cantidad de {cantidad} lápices es de ${(cantidad*60)-descuento}")
+else:
+    print(f"EL total a pagar por la cantidad de {cantidad} lápices es de ${cantidad*60}")
+
+#20
+nota1=int(input("Ingrese la primer nota"))
+nota2=int(input("Ingrese la segunda nota"))
+nota3=int(input("Ingrese la tercer nota"))
+nota4=int(input("Ingrese la cuarta nota"))
+promedio=int((nota1+nota2+nota3+nota4)/4)
+if (promedio>=6):
+    print("Usted ha aprobado el curso")
+else:
+    print("Usted ha desaprobado el curso")
