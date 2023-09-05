@@ -86,14 +86,14 @@ variableA=variableB
 variableB=aux
 print(f"El valor de A es {variableA} y el valor de B es {variableB}")
 #Ejercicio 15
-horaSalida=float(input('indique hora de salida'))
-minutosSalida=float(input('indique minuto de salida'))
-segundosSalida=float(input('indique segundos de salida'))
-tsegundos=float(input('indique los segundos totales que se demoro para llegar'))
+horaSalida=float(input('indique hora de salida: '))
+minutosSalida=float(input('indique minuto de salida: '))
+segundosSalida=float(input('indique segundos de salida: '))
+tsegundos=float(input('indique los segundos totales que se demoro para llegar: '))
 horaLlegada=tsegundos//3600
 minutosLlegada=(tsegundos%3600)//60
 segundosLlegada=tsegundos%60
-print(f'el ciclista llego a las {horaLlegada+horaSalida} hs, {minutosLlegada+minutosSalida} min y {segundosLlegada+segundosSalida} seg')
+print(f'el ciclista llego a las {horaLlegada+horaSalida} hs, {minutosLlegada+minutosSalida} min y {segundosLlegada+segundosSalida} seg')
 #Ejercicio 16
 nombre=input("Ingrese su nombre")
 apellido= input("Ingrese su apellido")
