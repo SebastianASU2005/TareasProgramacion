@@ -7,8 +7,7 @@ area=base*altura
 cateto1=float(input("ingrese cateto 1"))
 cateto2=float(input("ingrese cateto 2"))
 hipotenusa=(cateto1**2)+(cateto2**2)
-raiz=1/2
-hipotenusa=hipotenusa**raiz
+hipotenusa=hipotenusa**(1/2)
 print(hipotenusa)
 #Ejercicio 3
 num1=float(input("ingrese numero1"))
@@ -80,11 +79,12 @@ print(f"La raíz cúbica de {num1} es: {caudra2} y la raíz del mismo número es
 num1=str(23)
 print(num1[::-1])#usando esetea fórmula se escriben todos los caracteres de adelante hacia atras
 #Ejercicio 14
-var1=int(input("Ingrese el valor de A"))
-var2=int(input("Ingrese el valor de B"))
-aux=var1
-var1=var2
-print(f"El valor de A es {var1} y el valor de B es {aux}")
+variableA=int(input("Ingrese el valor de A"))
+variableB =int(input("Ingrese el valor de B"))
+aux=variableA
+variableA=variableB
+variableB=aux
+print(f"El valor de A es {variableA} y el valor de B es {variableB}")
 #Ejercicio 15
 horaSalida=float(input('indique hora de salida'))
 minutosSalida=float(input('indique minuto de salida'))
