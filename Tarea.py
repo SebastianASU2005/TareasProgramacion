@@ -11,7 +11,7 @@ division=numero1/numero2
 #Ejercicio 5
 nombre='Sebastian'
 #Ejercicio 6
-precio=20.5
+precio=float(20.5)
 #Ejercicio 7
 descuento=20.5*0.25
 #Ejercicio 8
