@@ -32,13 +32,13 @@ print(f'{diaS}/{dd}/{mm}')
 
 
 if(diaS=='lunes' or diaS=='martes' or diaS=='miercoles' or diaS=='jueves' or diaS=='viernes' or 
-   diaS=='sabado' or diaS=='domingo' ) and (int(dd)>0 and int(dd)<=31) and (int(mm)>0 and int(mm)<=12):
-   print('la fecha es valida') 
-   if(diaS=='lunes' ):
-    print('Clases nivel inicial')
-    cantAlumnos=int(input('cuantos alumnos hay: '))
-    aprobados=int(input('cuantos alumnos aprobaron: '))    
-    print(f'el porcentaje de alumnos aprobados es: {(aprobados*100)/cantAlumnos}')
+    diaS=='sabado' or diaS=='domingo' ) and (int(dd)>0 and int(dd)<=31) and (int(mm)>0 and int(mm)<=12):
+    print('la fecha es valida') 
+    if(diaS=='lunes' ):
+        print('Clases nivel inicial')
+        cantAlumnos=int(input('cuantos alumnos hay: '))
+        aprobados=int(input('cuantos alumnos aprobaron: '))    
+        print(f'el porcentaje de alumnos aprobados es: {(aprobados*100)/cantAlumnos}')
     
 elif(diaS=='martes'):
     print('Clases nivel intermedio')
@@ -58,7 +58,7 @@ elif(diaS=='jueves'):
     if(porc>=50):
         print('aisitio a la mayoria de las clases')
     else:
-         print('no asistio a la mayoria de la clase')
+        print('no asistio a la mayoria de la clase')
 
     
 elif(diaS=='viernes') and  ((int(dd)==1 and int(mm)==1) or (int(dd)==1 and int(mm)==7)) :

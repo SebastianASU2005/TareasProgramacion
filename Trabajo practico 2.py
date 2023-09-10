@@ -153,7 +153,7 @@ else:
 a=float(input("Ingrese el valor de A"))
 b=float(input("Ingrese el valor de B"))
 x=-b/a
-print(f"El valor de x en la ecuación {a}x + {b} = 0 es de {x}")
+print(f"El valor de x en la ecuación es de: {x}")
 
 #15
 forma=str(input("Ingrese T o t si desea calcular el área de un triángulo ó ingrese C o c si desea calcular el área de un círculo")).lower()
